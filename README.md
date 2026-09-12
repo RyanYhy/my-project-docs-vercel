@@ -2,9 +2,10 @@
 
 个人学习与项目文档站，基于 [Hugo Extended](https://gohugo.io/) 与 [Oink](https://oink.pgsty.com) 主题构建。
 
-- **GitHub Pages（原站）**：<https://ryanyhy.github.io/YHY-Website/>
-- **本仓库（Vercel 部署副本）**：[RyanYhy/my-project-docs-vercel](https://github.com/RyanYhy/my-project-docs-vercel)
-- **原站源码**：[RyanYhy/YHY-Website](https://github.com/RyanYhy/YHY-Website)
+- **线上（Vercel）**：<https://ryan.0412.online/>
+- **GitHub Pages（镜像）**：<https://ryanyhy.github.io/YHY-Website/>
+- **本仓库**：[RyanYhy/my-project-docs-vercel](https://github.com/RyanYhy/my-project-docs-vercel)
+- **Pages 源码**：[RyanYhy/YHY-Website](https://github.com/RyanYhy/YHY-Website)
 
 ## 内容栏目
 
@@ -39,7 +40,7 @@ hugo --gc --minify
 1. 打开 [vercel.com](https://vercel.com)，用 GitHub 登录。
 2. **Add New → Project**，Import `RyanYhy/my-project-docs-vercel`。
 3. 构建设置留空即可：`vercel.json` 已指定构建命令与输出目录 `public`。
-4. 点 **Deploy**。首次成功后会得到 `*.vercel.app` 地址。
+4. 点 **Deploy**。生产域名是 <https://ryan.0412.online/>（Vercel 项目里绑定的自定义域名）。
 
 之后每次 push `main`，Vercel 会按 [`build.sh`](build.sh) 安装 Hugo Extended **0.164.0** 并重新发布。
 

@@ -2,7 +2,7 @@
   "name": "yhy-website",
   "description": "YHY personal study website — notes, projects, and RAICOM docs",
   "repository": "github:RyanYhy/YHY-Website",
-  "homepage": "https://ryanyhy.github.io/YHY-Website/",
+  "homepage": "https://ryan.0412.online/",
   "license": "Apache-2.0",
   "private": true,
   "scripts": {

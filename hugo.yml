@@ -108,7 +108,7 @@ params:
     latest: v0.6.0
   version: v0.6.0
   hugoMinVersion: &hugoMinVersion 0.160.1
-  productionURL: &productionURL https://ryanyhy.github.io/YHY-Website/
+  productionURL: &productionURL https://ryan.0412.online/
   logo: images/avatar.png
   copyright:
     authors: '[Ryan Yhy](https://github.com/RyanYhy)'
