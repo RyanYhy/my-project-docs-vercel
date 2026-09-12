@@ -2,8 +2,9 @@
 
 个人学习与项目文档站，基于 [Hugo Extended](https://gohugo.io/) 与 [Oink](https://oink.pgsty.com) 主题构建。
 
-- **线上地址**：<https://ryanyhy.github.io/YHY-Website/>
-- **源码仓库**：[RyanYhy/YHY-Website](https://github.com/RyanYhy/YHY-Website)
+- **GitHub Pages（原站）**：<https://ryanyhy.github.io/YHY-Website/>
+- **本仓库（Vercel 部署副本）**：[RyanYhy/my-project-docs-vercel](https://github.com/RyanYhy/my-project-docs-vercel)
+- **原站源码**：[RyanYhy/YHY-Website](https://github.com/RyanYhy/YHY-Website)
 
 ## 内容栏目
 
@@ -19,7 +20,7 @@
 需要 [Hugo Extended](https://gohugo.io/installation/)（版本见 `go.mod` / CI 配置）。
 
 ```powershell
-cd my-project-docs
+cd my-project-docs-vercel
 hugo server
 ```
 
@@ -33,13 +34,20 @@ hugo --gc --minify
 
 ## 部署
 
-推送到 `main` 分支后，GitHub Actions（[`.github/workflows/pages.yml`](.github/workflows/pages.yml)）自动构建并发布到 GitHub Pages。
+本仓库走 **Vercel**，不发布 GitHub Pages（Pages 仍由 [YHY-Website](https://github.com/RyanYhy/YHY-Website) 负责）。
+
+1. 打开 [vercel.com](https://vercel.com)，用 GitHub 登录。
+2. **Add New → Project**，Import `RyanYhy/my-project-docs-vercel`。
+3. 构建设置留空即可：`vercel.json` 已指定构建命令与输出目录 `public`。
+4. 点 **Deploy**。首次成功后会得到 `*.vercel.app` 地址。
+
+之后每次 push `main`，Vercel 会按 [`build.sh`](build.sh) 安装 Hugo Extended **0.164.0** 并重新发布。
 
 ## 技术栈
 
 - **静态站点**：Hugo Extended
 - **主题**：[Oink](https://github.com/pgsty/oink)（Hugo Module，`go.mod` 中 `require github.com/pgsty/oink`）
-- **托管**：GitHub Pages
+- **托管**：Vercel（本仓库）；GitHub Pages 仍托管原仓库
 
 ## 许可与署名
 

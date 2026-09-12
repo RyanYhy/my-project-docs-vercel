@@ -32,6 +32,10 @@ outputs:
 imaging:
   resampleFilter: CatmullRom # cSpell:disable-line
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 markup:
   tableOfContents:
     endLevel: 4
@@ -111,8 +115,8 @@ params:
     from_year: 2026
     to_year: present
   footer_center_info: 'Powered by [Oink](https://oink.pgsty.com)'
-  github_repo: https://github.com/RyanYhy/YHY-Website
-  github_project_repo: https://github.com/RyanYhy/YHY-Website
+  github_repo: https://github.com/RyanYhy/my-project-docs-vercel
+  github_project_repo: https://github.com/RyanYhy/my-project-docs-vercel
   github_subdir: ''
   offline_search: true
   offline_search_on_serve: true

@@ -8,6 +8,7 @@ tmp
 # Local tooling
 .DS_Store
 /.idea/
+.vercel/
 node_modules/
 go.work
 go.work.sum
