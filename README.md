@@ -33,6 +33,24 @@ hugo server
 hugo --gc --minify
 ```
 
+## 双语与评论
+
+中文是默认语言，英文入口为 `/en/`。英文内容使用同目录的 `.en.md` 文件，
+翻译约定见 [TRANSLATION.md](TRANSLATION.md)。
+
+博客文章通过 Oink 内置的 Giscus 接入评论，评论保存在
+`RyanYhy/my-project-docs-vercel` 的 `Announcements` Discussions 分类。
+首页、栏目列表、学习和经历文档不显示评论。评论界面随页面语言切换，颜色随
+站点深浅色设置切换。读者使用 GitHub 登录后发表评论。
+
+中英文页面与 GitHub Pages 镜像共用同一条讨论：`mapping: specific`，
+`data-term` 为不带语言和站点前缀的 `/blog/<slug>/`。两个项目都启用博客文章
+评论；博客列表页通过 `comments: false` 单独关闭。
+
+本地运行 `hugo server --disableFastRender`，打开任意博客文章并滚动到底部查看
+评论区。首次发言或回应前尚未创建 Discussion 属于正常情况。配置中的仓库 ID
+和分类 ID 是公开标识；不要填写 GitHub token。
+
 ## 部署
 
 本仓库走 **Vercel**，不发布 GitHub Pages（Pages 仍由 [YHY-Website](https://github.com/RyanYhy/YHY-Website) 负责）。
